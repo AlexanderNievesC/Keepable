@@ -1,0 +1,14 @@
+*{
+    background-color: #1D2128;
+    border:0px;
+}
+
+#header{
+    max-height: 70px;
+    max-width:1440px;
+    border-bottom-color: white;
+}
+
+#title{
+    color:red;
+}
