@@ -1,1 +1,6 @@
-console.log("Hola")
+//Show Palette
+function ShowPalette(){
+
+
+
+}

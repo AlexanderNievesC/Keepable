@@ -1,0 +1,159 @@
+*{
+    background-color: #1D2128;
+    border:0px;
+    margin:0px;
+}
+
+#header{
+    display:flex;
+    flex-direction: row;
+    gap:117px;
+    max-height: 70px;
+    max-width:1440px;
+    border-bottom: 1px solid white;
+    padding:23px 30px;
+    align-items: center;
+}
+
+#text-header{
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-weight: 700;
+    text-align: center;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+    gap:280px;
+
+    align-content: center;
+}
+
+#aside{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 10px;
+    height: 100vh;
+    width: 280px;
+    border-right: 1px solid white;
+    align-content: center;
+}
+
+
+.item{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    border-radius: 0px 25px 25px 0px;
+    padding:16px 20px;
+    color:white;    
+}
+
+.item:hover{
+    background-color: #999B9E;
+}
+
+.item-background{
+    background-color: #999B9E;
+}
+
+
+#text-item{
+    font-size: 18px;
+    font-weight: 550;
+}
+
+.icon{
+    background-color: transparent;
+}
+
+#target{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    align-self: center;
+    margin-top: 24px;
+    margin-bottom: 212px;
+    background-color:red;
+    width: 600px;
+    height:120px;
+    background-color: white;
+    padding:20px;
+    border-radius: 8px;
+}
+
+#target-zone{
+    display:flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 1160px;
+}
+
+#title_target{
+    color:black;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#title_target::placeholder{
+    color:black;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#form{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+#subtitle_target{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.25px;
+}
+
+#button-text{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+}
+
+#text-detail{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#main-text{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+#text-detail_main{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    color: white;
+}
+
+#palette{
+    display: none;
+}
+
