@@ -9,7 +9,7 @@
   background-color: #00f;
 }
 
-p,h1,h2,h3,div,form,button{
+p,h1,h2,h3,form,button,div{
   background: none;
   *:focus {
     outline: none;

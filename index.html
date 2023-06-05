@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="code.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="css/reset.css">
 
@@ -48,18 +47,30 @@
                 </form>
                 
                 <div id="button-text">
-                    <img src="/images/palet.svg" alt="palet" class="icon">
+                    <img src="/images/palet.svg" alt="palet" class="icon" id="acuarela">
                     <button type="button" id="text-detail" >Keep it!</button>
-                    <!-- Creating Palette -->
-                    <div id="palette">
+                </div>
 
+                <!-- Creating Palette -->
+                <div id="main-palette">  
+                    <div id="palette">
+                        <div class="palette-element" style="color:white; border: 1px solid #999B9E"></div>
+                        <div class="palette-element" style="background-color:#F28B82"></div>
+                        <div class="palette-element" style="background-color:#FBBC04"></div>
+                        <div class="palette-element" style="background-color:#FFF475"></div >
+                        <div class="palette-element" style="background-color:#CCFF90" ></div >
+                        <div class="palette-element" style="background-color:#A7FFEB"></div >
+                        <div class="palette-element" style="background-color:#CBF0F8"></div >
+                        <div class="palette-element" style="background-color:#AECBFA"></div >
+                        <div class="palette-element" style="background-color:#D7AEFB"></div >
+                        <div class="palette-element" style="background-color:#FDCFE8"></div >
                     </div>
-                
                 </div>
             </div>
-            <div id="text-detail_main" >No notes to keep</div>
+        
+            <div id="note">No notes to keep</div>
         </div>
    </div>
-
+   <script src="code.js"></script>
 </body>
 </html>
