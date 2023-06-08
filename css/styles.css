@@ -134,7 +134,11 @@
     line-height: 24px;
 }
 
+
 #palette{
+    position: absolute;
+    bottom: 70px;
+    left:-39px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -157,11 +161,6 @@
     display: none;
 }
 
-#main-palette{
-    position: absolute;
-    bottom: 70px;
-    left:-39px
-}
 
 #note{
     display: none;
@@ -224,7 +223,7 @@
     max-width: 200px;
 }
 
-#main-palette{
+#main-palette-personal{
     position: absolute;
     bottom: 50px;
     left:-39px

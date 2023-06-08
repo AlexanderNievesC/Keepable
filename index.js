@@ -1,7 +1,7 @@
 //  Show Palette
 
     let element=document.querySelector("#acuarela")
-    let content=document.querySelector("#main-palette")
+    let content=document.querySelector("#palette-zone")
 
     element.addEventListener("click",function(){
       content.classList.toggle("palette-hidden")
@@ -21,10 +21,8 @@
       }
     )
 
-  //Saving data
-      let data=[{
-        
-      }]
+  //Show/hide notes
+
 
 
 
