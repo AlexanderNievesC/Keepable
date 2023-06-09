@@ -161,9 +161,7 @@
     display: none;
 }
 
-
 #note{
-    display: none;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -171,6 +169,10 @@
     color: white;
     margin-top: 212px;
     text-align: center;    
+}
+
+.note_hidden{
+    display: none;
 }
 
 #pers_card-zone{
@@ -225,6 +227,6 @@
 
 #main-palette-personal{
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     left:-39px
 }
