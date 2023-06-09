@@ -21,7 +21,11 @@
     )
  
     data=[
-      
+      {
+        tile:"test",
+        subtitle:"",
+        color:""
+      }
     ]
 
 //Create new item
@@ -34,6 +38,7 @@
       form.setAttribute("id","form")
       let input1=document.createElement("input")
       input1.setAttribute("class","title_target")
+      input1.setAttribute("placeholder","The title for my new note")
       input1.value=value.title
       let input2=document.createElement("input")
       input2.setAttribute("class","subtitle_target-item")
@@ -53,38 +58,77 @@
       //Palette
       let personal_palette = document.createElement("div")
       personal_palette.setAttribute("id","main-palette-personal")
+      personal_palette.setAttribute("class","palette-hidden")
       let palette=document.createElement("div")
       palette.setAttribute("id","palette")
 
       let color1=document.createElement("div")
+      color1.classList.add("palette-element")
       color1.style.backgroundColor="white"
       color1.style.border="1px solid #999B9E"
       let color2=document.createElement("div")
+      color2.classList.add("palette-element")
       color2.style.backgroundColor="#F28B82"
       let color3=document.createElement("div")
+      color3.classList.add("palette-element")
       color3.style.backgroundColor="#FBBC04"
       let color4=document.createElement("div")
+      color4.classList.add("palette-element")
       color4.style.backgroundColor="#FFF475"
       let color5=document.createElement("div")
+      color5.classList.add("palette-element")
       color5.style.backgroundColor="#CCFF90"
       let color6=document.createElement("div")
+      color6.classList.add("palette-element")
       color6.style.backgroundColor="#A7FFEB"
       let color7=document.createElement("div")
+      color7.classList.add("palette-element")
       color7.style.backgroundColor="#CBF0F8"
       let color8=document.createElement("div")
+      color8.classList.add("palette-element")
       color8.style.backgroundColor="#AECBFA"
       let color9=document.createElement("div")
+      color9.classList.add("palette-element")
       color9.style.backgroundColor="#D7AEFB"
       let color10=document.createElement("div")
+      color10.classList.add("palette-element")
       color10.style.backgroundColor="#FDCFE8"
 
-      personal_palette.append(palette)
-      palette.append(color1,color2,color3, color4, color5,color6,color7,color8,color9,color10)
-  
+      
+      img1.addEventListener("click",function(){
+        personal_palette.classList.toggle("palette-hidden")
+      })
+
+      //Change color
+      // let element_palet=document.querySelectorAll(".palette-element")
+      // let new_target=document.querySelector(".pers_card-item")
+
+
+      // element_palet.forEach(
+      //   color=>{
+      //     color.addEventListener("click", function(){
+            
+      //       let new_color=window.getComputedStyle(color).backgroundColor
+      //       console.log(new_color)
+      //       new_target.style.background=new_color
+      //     })
+      //   }
+      // )
+
+      //Remove item 
+      let trash_zone=document.getElementById("trash_zone")
+      console.log(trash_zone)
+
+      img2.addEventListener("click",function(){
+      card_item.remove()
+      })
+
       form.append(input1,input2)
       image_zone.append(img1,img2)
-      card_item.append(form,image_zone)
-  
+      personal_palette.append(palette)
+      palette.append(color1,color2,color3, color4, color5,color6,color7,color8,color9,color10)
+      card_item.append(form,image_zone,personal_palette)
+
       return card_item
     
   }
@@ -115,6 +159,8 @@
       data_feed.append(createItem(parameter))
     }
   }
+
+  //Remove item
 
     
 
