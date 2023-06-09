@@ -1,5 +1,4 @@
 //  Show Palette
-
     let element=document.querySelector("#acuarela")
     let content=document.querySelector("#palette-zone")
 
@@ -20,31 +19,17 @@
         })
       }
     )
-
-  //Getting values
-      let form= document.querySelector("#form")
-      console.dir(form.lastChild)
+ 
+    data=[
       
-
-
-  //Show/hide notes
-
-  data=[{
-      title:"Note 1",
-      subtitle: "Today is my exam",
-      color:"blue"
-  },
-  {
-      title:"Note 2",
-      subtitle: "Today is my 2nd exam",
-      color:"red"
-    }
     ]
 
-  function createItem(value){
+//Create new item
+    function createItem(value){
       //Main personal item
       let card_item=document.createElement("div")
       card_item.setAttribute("class","pers_card-item")
+      card_item.style.background=value.color
       let form=document.createElement("form")
       form.setAttribute("id","form")
       let input1=document.createElement("input")
@@ -95,10 +80,6 @@
 
       personal_palette.append(palette)
       palette.append(color1,color2,color3, color4, color5,color6,color7,color8,color9,color10)
-
-
-      console.log(personal_palette)
-  
   
       form.append(input1,input2)
       image_zone.append(img1,img2)
@@ -108,22 +89,33 @@
     
   }
 
-  if (data.length>=1){
-    let no_note=document.querySelector(".no_note")
-    no_note.classList.add("note_hidden")
-    let data_feed=document.querySelector(".js-note")
-
-    data.map(element=>{
-      data_feed.append(createItem(element))
-    })
+  let title= document.querySelector(".title_target")
+  let subtitle= document.querySelector(".subtitle_target")
+  let button= document.querySelector("#text-detail")
+  let color=document.querySelector("#target")
+ 
+  button.addEventListener("click",function(){
+    value={
+      "title":title.value,
+      "subtitle":subtitle.value,
+      "color":color.style.backgroundColor
+    }
+    data.push(value)
+    console.log(data)
+    update(value)
+  })
+  
+  //Show comment or personal item 
+  function update(parameter){
+    if (data.length>=1){
+      let no_note=document.querySelector(".no_note")
+      no_note.classList.add("note_hidden")
     
-
+      let data_feed=document.querySelector(".js-note")
+      data_feed.append(createItem(parameter))
+    }
   }
 
-  
-
-
-    
     
 
   
